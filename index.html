@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện chuột</title>
+</head>
+<body>
+<form>
+    <img id="img" style="width: 10%" src="https://cdn-aooek.nitrocdn.com/jADLkKldCLyvbzneZqCzAXMpXrnxnSeV/assets/static/optimized/rev-fe9ac44/originals/48/15/b6/4815b63434fdfb0ee2231dc27b98a4c0.png" alt="">
+    <h4>Click button below to move the image to right</h4>
+    <input type="button" onclick="moveLeft()" value="Left">
+    <input type="button" onclick="moveRight()" value="Right">
+    <input type="button" onclick="moveUp()" value="Up">
+    <input type="button" onclick="moveDown()" value="Down">
+
+</form>
+
+<script>
+
+    let img0bj ;
+
+    function init(){
+        img0bj = document.getElementById('img');
+        img0bj.style.position = 'relative';
+        img0bj.style.left = '0px';
+        img0bj.style.top = '0px';
+
+    }
+
+    function moveLeft() {
+        img0bj.style.left = parseInt(img0bj.style.left) - 10 + 'px';
+    }
+
+    function moveRight() {
+        img0bj.style.left = parseInt(img0bj.style.left) + 10 + 'px';
+    }
+
+    function moveDown() {
+        img0bj.style.top = parseInt(img0bj.style.top) + 10 + 'px';
+    }
+
+    function moveUp() {
+        img0bj.style.top = parseInt(img0bj.style.top) - 10 + 'px';
+    }
+
+    window.onload = init;
+</script>
+</body>
+</html>
